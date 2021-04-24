@@ -25,8 +25,8 @@ Master Setup:
 		JAVA_ARGS="-Xms512m -Xmx512m -XX:MaxPermSize=256m"
 
 		FYI Only: When we start Puppet Server, it will use port 8140 to communicate, so we'll ensure it's open:
-
-
+		
+		ufw allow 8140
 		systemctl start puppetserver
 		systemctl status puppetserver
 		systemctl enable puppetserver  # for enabling boot time start time
